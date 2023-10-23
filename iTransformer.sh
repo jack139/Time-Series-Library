@@ -1,14 +1,13 @@
 export CUDA_VISIBLE_DEVICES=0
 
-model_name=iTransformer
 
-python3.9 -u run.py \
+python3.9 -u run_iTransformer.py \
   --task_name long_term_forecast \
   --is_training 1 \
   --root_path ./dataset/weather/ \
   --data_path weather.csv \
   --model_id weather_96_96 \
-  --model $model_name \
+  --model iTransformer \
   --data custom \
   --features M \
   --seq_len 96 \
